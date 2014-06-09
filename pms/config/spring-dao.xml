@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.0.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-
+	<!-- 使用proxool读取数据源 -->
 	<bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
 		<property name="alias" value="proxoolDataSource" />
 		<property name="driver" value="${jdbc.driver}" />
@@ -45,11 +45,6 @@
 			</props>
 		</property>
 	</bean>
-<!-- 
-	<bean id="lookupResolver" class="com.avicit.framework.support.matchrule.context.HibernateMatchRuleResolver">
-		<property name="packagesToScan" value="com.jinbo.pms.*" />
-	</bean>
- -->
 	<!-- 开启AOP监听 只对当前配置文件有效 -->
 	<aop:aspectj-autoproxy expose-proxy="true" />
 

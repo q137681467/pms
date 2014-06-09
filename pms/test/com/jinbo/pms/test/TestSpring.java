@@ -20,7 +20,7 @@ public class TestSpring {
 	// 测试事务
 	@Test
 	public void testTx() throws Exception {
-		TestService testService = (TestService) ac.getBean("TestService");
+		TestService testService = (TestService) ac.getBean("testService");
 		System.out.println(testService);
 		// testService.saveTwoUsers();
 		testService.saveTwoUsers();
