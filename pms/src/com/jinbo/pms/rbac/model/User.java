@@ -13,6 +13,11 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "pms_user")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+/**
+ * 
+ * @author Administrator  liwx
+ *
+ */
 public class User {
 	 	@Id
 	    @GeneratedValue(strategy = GenerationType.AUTO)
