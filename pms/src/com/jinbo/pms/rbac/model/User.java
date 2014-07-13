@@ -16,7 +16,10 @@ import com.jinbo.pms.common.base.BaseDataEntity;
 @Table(name = "pms_user")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class User extends BaseDataEntity{
-	 	@Id
+	 /**
+	 */
+	private static final long serialVersionUID = 5329498762158609403L;
+		@Id
 	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    @Column(name = "id", nullable = false)
 	    private Integer id;
