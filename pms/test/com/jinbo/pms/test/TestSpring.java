@@ -23,7 +23,7 @@ public class TestSpring {
 		TestService testService = (TestService) ac.getBean("testService");
 		System.out.println(testService);
 		// testService.saveTwoUsers();
-		testService.saveTwoUsers();
+//		testService.saveTwoUsers();
 	}
 
 }

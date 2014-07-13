@@ -10,14 +10,16 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+import com.jinbo.pms.common.base.BaseDataEntity;
+
 @Entity
 @Table(name = "pms_user")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class User {
+public class User extends BaseDataEntity{
 	 	@Id
 	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    @Column(name = "id", nullable = false)
-	    private int id;
+	    private Integer id;
 	 	@Column(name = "username", nullable = false, length=20)
 	 	private String username;
 	 	@Column(name = "password", nullable = false, length=20)
